@@ -1,5 +1,29 @@
+/* The stylesheet for this portoflio is designed to accomodate
+structure, readability and accessibility for iPhone 12 Pro mobile users.
+
+It features a single-column Flexbox layout. It uses cascade to avoid 
+repetitive rules */
+
+:root {
+    --bg-color: #f8fafc;
+    --main-text: #0f172a;
+    --font-heading: 'Garamond', Georgia, serif;
+    --font-body: Roboto, sans-serif;
+}
+
+
 body {
-    color: rgb(56, 33, 255);
-     font-family: Garamond, serif;
-    background-color: #f1f1f1;
+    background-color: var(--bg-color);
+    color: var(--main-text);
+    font-family: var(--font-body); 
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 1.25 rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading); 
+    line-height: 1.2;
 }
