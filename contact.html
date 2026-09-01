@@ -12,9 +12,12 @@
     </title>  
     </head>
 <body>
-
+    <!-- <header> is used instead of <div> because it specifically tells browsers that this is 
+      introductory information for the 'works' page not body content. -->
     <header>
         <img src="profile_pic.png" alt="Profile Picture">
+        <!-- <nav> is used over <div> to tell browsers that the links inside are for
+         navigating the site, screen readers can jump straight into it. -->
         <nav> 
             <a href= "index.html">Home</a>
             <a href= "works.html">Works</a>
@@ -22,8 +25,15 @@
         </nav>
     </header>
 
+    <!-- <main> is used over <div> to indicate a single, primary content area of the 'works' page, 
+        not like any other content on the page-->
     <main>
+        <!-- <article> is used over <section> or <div> to show independently meaningful
+         information that would still make sense if it was pulled out and placed on its own
+         the other tags do not have this self-contained quality -->
         <article>
+            <!-- <header> is nested in <article> as this content has distinct information seperate from
+                the pages overall header-->
              <header>
                 <h1> Contact </h1>
                 <h2> Nokutenda Chavura</h2>
@@ -32,6 +42,8 @@
         </article>
     </main>
 
+    <!-- <footer> was used over <div> or <section> to indicate necessary miscellanous 
+        information such as copyright for the 'works' page, not standard body content. -->
     <footer>
         &copy; 2026 Copyright 
     </footer>
