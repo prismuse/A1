@@ -4,9 +4,16 @@ structure, readability and accessibility for iPhone 12 Pro mobile users.
 It features a single-column Flexbox layout. It uses cascade to avoid 
 repetitive rules */
 
+*::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --bg-color: #f8fafc;
     --main-text: #0f172a;
+    --accent-color: #366cc2;
     --font-heading: 'Garamond', Georgia, serif;
     --font-body: Roboto, sans-serif;
 }
@@ -20,10 +27,23 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding: 1.25 rem;
+    padding: 1.25rem;
 }
 
 h1, h2, h3 {
     font-family: var(--font-heading); 
     line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+}
+
+a, button {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent-color);
 }
