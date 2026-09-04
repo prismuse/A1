@@ -1,10 +1,13 @@
 /* The stylesheet for this portoflio is designed to accomodate
 structure, readability and accessibility for iPhone 12 Pro mobile users.
 
-It features a single-column Flexbox layout. It uses cascade to avoid 
+It features a single column Flexbox layout and uses cascade to avoid 
 repetitive rules */
 
-*::before, *::after{
+
+
+/* Global Resets & Accessibility */
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -12,38 +15,73 @@ repetitive rules */
 
 :root {
     --bg-color: #f8fafc;
-    --main-text: #0f172a;
+    --text-heading: #1a1d1a;
+    --text-body: #2d312e;
+    --text-secondary: #6b726e;
+    --forest-green: #1b4d3e;
     --accent-color: #366cc2;
-    --font-heading: 'Garamond', Georgia, serif;
-    --font-body: Roboto, sans-serif;
+    --border-color: #d1d5d3;
+
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Work Sans', sans-serif;
 }
 
-
+/* Base Body Styles */
 body {
-    background-color: var(--bg-color);
-    color: var(--main-text);
+    color: var(--text-body);
     font-family: var(--font-body); 
-
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding: 1.25rem;
+    font-size: 16px; /* 16px prevents mobile input auto-zoom */
+    padding: 24px;
+    margin: 0 auto;
+    align-items: center;
 }
 
+/* Typography Hierarchy */
 h1, h2, h3 {
-    font-family: var(--font-heading); 
-    line-height: 1.2;
-    margin-bottom: 0.75rem;
+    font-family: var(--font-heading);
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
 h1 {
-    font-size: 2.25rem;
+    font-size: 36px;
 }
 
-a, button {
-    min-height: 44px;
-    min-width: 44px;
-    display: inline-flex;
-    align-items: center;
-    color: var(--accent-color);
+h2 {
+    font-size: 22px;
+    color: var(--forest-green);
+}
+
+/* Portfolio Media Display */
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    margin-top: 12px;
+}
+
+
+/* Flex layout for side by side app screenshots */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.project-gallery img {
+    flex: 1 1 140px; /* Responsive wrapping for small viewports */
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color);
+    font-size: 14px;
+    color: var(--text-secondary);
+    text-align: center;
 }
