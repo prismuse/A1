@@ -4,6 +4,8 @@ structure, readability and accessibility for iPhone 12 Pro mobile users.
 It features a single column Flexbox layout and uses cascade to avoid 
 repetitive rules */
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap');
+
 /* Global Resets & Accessibility */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -30,8 +32,6 @@ body {
     font-family: var(--font-body); 
     font-size: 16px; /* prevents mobile auto-zoom */
     padding: 24px;
-    margin: 0 auto;
-    align-items: center;
 }
 
 /* Typography Ordering */
