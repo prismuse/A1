@@ -4,8 +4,6 @@ structure, readability and accessibility for iPhone 12 Pro mobile users.
 It features a single column Flexbox layout and uses cascade to avoid 
 repetitive rules */
 
-
-
 /* Global Resets & Accessibility */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -30,13 +28,13 @@ repetitive rules */
 body {
     color: var(--text-body);
     font-family: var(--font-body); 
-    font-size: 16px; /* 16px prevents mobile input auto-zoom */
+    font-size: 16px; /* prevents mobile auto-zoom */
     padding: 24px;
     margin: 0 auto;
     align-items: center;
 }
 
-/* Typography Hierarchy */
+/* Typography Ordering */
 h1, h2, h3 {
     font-family: var(--font-heading);
     line-height: 1.5;
@@ -52,7 +50,7 @@ h2 {
     color: var(--forest-green);
 }
 
-/* Portfolio Media Display */
+/* Media Display */
 article img {
     max-width: 100%;
     height: auto;
@@ -61,8 +59,7 @@ article img {
     margin-top: 12px;
 }
 
-
-/* Flex layout for side by side app screenshots */
+/* Flex layout for app screenshots */
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -71,9 +68,27 @@ article img {
 }
 
 .project-gallery img {
-    flex: 1 1 140px; /* Responsive wrapping for small viewports */
+    flex: 1 1 140px; /* Responsive wrapping for iPhone viewport */
     max-width: 100%;
     object-fit: cover;
+}
+
+.profile-container {
+  width: 150px;
+  height: 150px;
+  margin: 20px 0;
+  object-fit: cover; 
+  border-radius: 50%; /* Makes it a perfect circle */
+  border: 4px solid var(--accent-color);
+  overflow: hidden;
+
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Stops image from stretching or squishing */
+  object-position: center; /* Centres the face in the frame */
 }
 
 /* Footer */
